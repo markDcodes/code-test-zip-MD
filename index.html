@@ -7,9 +7,40 @@
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 </head>
+
+<header><h1>Zip Code Lookup App!</h1></header>
+
 <body>
+	<h2>This app allows you to enter a USPS ZIP Code and receive it's location data.</h2>
+		<!-- User Input Area -->
+		<div>
+			<form action="" method="" id="zipForm">	
+				<label for="zip">Enter a five-digit zipcode (#####): </label>
+				<input type="text" name="zip" id="zipInput" pattern="[0-9]{5}" maxlength="5"> <!-- pattern attr. allows only numbers, 5 characters -->
+				<button type="submit" onClick="getZipData()">Go</button>
+			</form>
+		</div>
+		<br>
+		<!-- API Results Area -->
+		
+		<h2>Details for the Zip Code You Entered:</h2>
+		<!-- State -->
+		<div class="resultBox">
+			<label for="state">State:</label>
+			<output type="text" name="state" id="state" placeholder="">
+		</div>
+		<!-- City -->
+		<div class="resultBox">			
+			<label for="city">City:</label>
+			<output type="text" name="city" id="city" placeholder="">
+		</div>
+		<!-- State Picture -->
+		<div class="resultBoxPic">			
+			<img id="stateAbrv" class="statePic">
+		</div>
 	
 	<script src="script.js"></script>
+
 </body>
 </html>
 
