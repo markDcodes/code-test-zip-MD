@@ -17,7 +17,7 @@ function getZipData(){
         client.open("GET", "http://api.zippopotam.us/us/" + userInputZip, true);
         client.onreadystatechange = function() {
             if(client.readyState == 4) {
-                alert(client.responseText);
+                // alert(client.responseText);
                 console.log(this.responseText);
                 //Send API data to Front-End
                 document.getElementById('state').value = JSON.parse(client.responseText).places[0].state //State
